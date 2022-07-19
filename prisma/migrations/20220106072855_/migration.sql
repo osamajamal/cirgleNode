@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Users" ALTER COLUMN "otpcode" DROP NOT NULL,
+ALTER COLUMN "otpcode" SET DEFAULT 0;
