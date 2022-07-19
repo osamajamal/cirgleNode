@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-const port = 3000;
+
 
 const signUp = require("./routes/signup");
 
@@ -20,9 +20,11 @@ app.use(express.urlencoded({
 app.use("/api", [signUp]);
 
 
-server.listen(port,  async()=>{
-    console.log('server running');
-})
+
+const PORT = process.env.PORT || 3100;
+server.listen(PORT, async () => {
+  console.log(`Server has started on PORT: ${PORT}`);
+});
 
 app.use("/", (req, res)=>{
      return res.send({
