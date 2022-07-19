@@ -8,7 +8,10 @@ const {
   signUpValidation,
   simpleLoginValidation,
   checkEmailValidation,
+  
   referalIdValidation,
+
+
 } = require("../joiValidation/validate");
 const {
   getError,
